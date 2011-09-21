@@ -203,7 +203,6 @@ module Geocoder::US
     def more_features_by_street_and_zip (street, tokens, zips)
       sql, params = features_by_street(street, tokens)
       if !zips.empty? and !zips[0].nil?
-        puts "zip results 2"
         zip3s = zips.map {|z| z[0..2]+'%'}.to_set.to_a
         like_list = zip3s.map {|z| "feature.zip LIKE ?"}.join(" OR ")
         sql += " AND (#{like_list})"
