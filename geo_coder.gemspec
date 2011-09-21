@@ -17,10 +17,13 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
+    "Gemfile",
+    "Gemfile.lock",
     "History.txt",
     "Makefile",
     "Manifest.txt",
     "README.rdoc",
+    "Rakefile",
     "TODO.txt",
     "VERSION",
     "bin/build_indexes",
@@ -46,6 +49,7 @@ Gem::Specification.new do |s|
     "doc/lookup.rst",
     "doc/parsing.rst",
     "doc/voidspace.css",
+    "geo_coder.gemspec",
     "lib/geocoder/us.rb",
     "lib/geocoder/us/address.rb",
     "lib/geocoder/us/constants.rb",
