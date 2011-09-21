@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sqlite3'
 require 'text'
-require 'levenshtein'
 
 require 'set'
 require 'pp'
@@ -60,7 +59,7 @@ module Geocoder::US
           test1, test2 = [word1, word2].map {|w|
             w.to_s.gsub(/\W/o, "").downcase
           }
-          dist = Levenshtein.distance(test1, test2)
+          dist = Text::Levenshtein.distance(test1, test2)
           result = dist.to_f / [test1.length, test2.length].max
           func.set_result result 
         end
